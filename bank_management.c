@@ -27,6 +27,11 @@ void create_account(){
 
        printf("\t Please Enter your phone number: ");
        gets(phone_number);
+       while(strlen(phone_number) != 11){
+            printf("\t Please Enter your 11 digit phone number: ");
+            fflush(stdin);
+            gets(phone_number);  
+       }
        fflush(stdin);
        printf("\t Please Enter your password: ");
        gets(password);
@@ -35,6 +40,7 @@ void create_account(){
        gets(e_mail);
        fflush(stdin);
        printf("\t Please Enter your address: ");
+       fflush(stdin);
        gets(address);
 
        printf("\nName: %s\n",user_name);
