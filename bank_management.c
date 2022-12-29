@@ -1021,5 +1021,5 @@ void exit_func()
     new_line(1);
     printf("\t\t\t\t MD. MEHEDI HASAN (2233674642)");
     new_line(2);
-    exit(10);
+    exit(1);
 }
