@@ -56,7 +56,7 @@ void main()
     menu();
     option_select();
 }
-void welcome_message(void)	// This function will handle Welcome Message
+void welcome_message()	// This function will handle Welcome Message
 {
     char m[] = "$$$$$$$$$$ Welcome To The Bank Management System $$$$$$$$$$";
     for(int i=0; i<strlen(m); i++)
@@ -82,7 +82,7 @@ void show_msg(char tmp[],int to_time)
         wait(to_time);
     }
 }
-void new_line(int x)	
+void new_line(int x)	// This function will handle New lines
 {
     for (int i = 0; i < x; i++)
     {
@@ -188,7 +188,6 @@ int isPhn(char tmp[],int len)
         if(!isdigit(tmp[i]))
         {
             return false;
-            break;
         }
     }
 }
@@ -303,7 +302,7 @@ goback_phone:
 
     printf("\t\t\t\tEnter address : ");
 goback_address:
-    
+
     scanf(" %[^\n]%*c", info.address);
     if (strlen(info.address) > 30)
     {
@@ -559,10 +558,9 @@ void withdraw_money()
     FILE *filew_wtr;
     FILE *filew_1_wtr;
     int state;
-    int tmp_acc,op;
+    int tmp_acc;
     float amt;
     char tmp_pwd[100];
-    char tmp_up[50];
     state=0;
     filer_wtr=fopen(main_file,main_file_mode_read);
     filew_1_wtr=fopen(tmp_file,tmp_file_append);
@@ -664,10 +662,9 @@ void deposit_money()
     FILE *filew_dpr;
     FILE *filew_1_dpr;
     int state=0;
-    int tmp_acc,op;
+    int tmp_acc;
     float amt;
     char tmp_pwd[100];
-    char tmp_up[50];
     state=0;
     filer_dpr=fopen(main_file,main_file_mode_read);
     filew_1_dpr=fopen(tmp_file,tmp_file_append);
@@ -766,10 +763,8 @@ void show_statement()
     stmt txn;
     FILE *filer_stmt;
     int state=0,count=0;
-    int tmp_acc,op;
-    float amt;
+    int tmp_acc;
     char tmp_pwd[100];
-    char tmp_up[50];
 goback_account:
     filer_stmt=fopen(txn_file,txn_file_mode_read);
     printf("\t\t\t\t Please enter your account no: ");
@@ -835,7 +830,6 @@ void delete_account()
     int state;
     int tmp_acc,op;
     char tmp_pwd[9];
-    char tmp_up[50];
     state=0;
     filer_dlt=fopen(main_file,main_file_mode_read);
     filew_dlt=fopen(tmp_file,tmp_file_append);
