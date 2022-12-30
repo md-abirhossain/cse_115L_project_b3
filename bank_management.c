@@ -218,7 +218,7 @@ int email_exs(char tmp[])
 void generate_acc(int *tmp)
 {
     acc info;
-    int tmp_act,count=0;;
+    int tmp_act,count=0;
     FILE *file_gnr_acc;
     file_gnr_acc=fopen(main_file,main_file_mode_read);
     if(file_gnr_acc == NULL)
