@@ -1,3 +1,5 @@
+#define true 1
+#define false 0
 #define  main_file "Record.txt"
 #define  main_file_mode_write "w"
 #define  main_file_mode_read "r"
