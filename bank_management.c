@@ -26,7 +26,7 @@ typedef struct Statement
     char date_time[100];
 } stmt;
 int attempt=0;
-void welcome_message(void);	// This function will handle Welcome Message
+void welcome_message();
 void line_start();
 void line_end();
 void show_msg(char tmp[],int to_time);
