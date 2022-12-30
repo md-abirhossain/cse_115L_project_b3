@@ -31,5 +31,4 @@
 	            usleep(x*100);
 	        }
 #endif
-#define true 1
-#define false 0
+
